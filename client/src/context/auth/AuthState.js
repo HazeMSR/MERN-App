@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { v4 as uuid } from 'uuid';
 import axios from 'axios';
 import AuthContext from './authContext';
 import AuthReducer from './authReducer';
@@ -29,6 +28,7 @@ const AuthState = props => {
 
     // Load User
     const loadUser = async () => {
+        console.log('ENTRO1');
         if(localStorage.token) {
             console.log('TOKEN: ',localStorage.token);
             setAuthToken(localStorage.token);
